@@ -1,81 +1,426 @@
-html, body {
-	scroll-behavior: smooth;
-	user-select: none;
-	background: linear-gradient(135deg, #fff8f0 0%, #ffeecc 100%);
-	min-height: 100vh;
-	font-size: 14px;
-	font-family: CTRNTLGPGothic;
-	letter-spacing: 0px;
-	margin: 0px;
-	overflow-x: hidden;
+html,body {
+    scroll-behavior: smooth;
+    user-select: none;
+    background: linear-gradient(135deg,#fff8f0 0%,#ffeecc 100%);
+    min-height: 100vh;
+    font-size: 14px;
+    font-family: CTRNTLGPGothic,nintendo_NTLG-DB_002,nintendo_NTLG-DB_001,sans-serif!important;
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    overflow-x: hidden;
+    line-height: 1.25em;
 }
-.nodisp {font-size: 0px; visibility: hidden;}
-h1, h2, h3, h4, h5, h6 {margin: 4px;}
-th {font-family: WiiNTLGPGothic;}
-.dbgtxt {font-family: WiiNTLGGothic; font-size: 4px; letter-spacing: 0;}
-smtxt {font-size: 12px; letter-spacing: 0;}
-a {text-decoration: none; text-decoration-color: none;}
-code {padding: 5px; letter-spacing: 0; display: block; width: 96%; border: 2px solid gray;}
-.sbcode {font-family: "Misaki Gothic"; background-color: black; color: white;}
-.stdcode {font-family: WiiNTLGGothic; background-color: white; color: black;}
-header {position: fixed; top: 0;}
-footer {position: fixed; bottom: 0;}
-header, footer {padding: 5px; font-size: 16px; background-color: rgba(0,0,0,.65); color: white; width:100%; height: 22px; overflow-x: hidden; overflow-y: hidden; box-shadow: 0px 0px 15px black; vertical-align: middle;}
-.buttondama {background-color: rgba(0,0,0,0.15); color: #eee;}
-.buttondama:hover {background-color: rgba(0,0,0,0.5); color: white;}
-.btnl {background-color: rgba(255,255,255,0.15); color: #222;}
-.btnl.btdisabled {background-color: rgba(255,255,255,1); color: gray;}
-.btnl:hover:not(.btdisabled) {background-color: rgba(255,255,255,0.5); color: black;}
-btn {transition: background-color 0.3s, color 0.3s; padding: 1px 4px 1px 4px; vertical-align: middle;}
-inbody {display: block; min-height: 90%; width: 92%; margin: 40px 3%; padding: 8px; background-color: rgba(255,255,255,0.875); box-shadow: 0px 5px 10px rgba(0,0,0,0.5);}
-vr:after {margin-left: 5px; margin-right: 5px; content: "|";}
-/* .texgold {background: url("assets/tex_gold.png"); background-size: 100% 100%; color: #c70;}
-.texsilver {background: url("assets/tex_silver.png"); background-size: 100% 100%; color: gray;}
-.texbronze {background: url("assets/tex_bronze.png"); background-size: 100% 100%; color: #310;}
-.texcyan {background: url("assets/tex_cyan.png"); background-size: 100% 100%; color: white;}
-.texsky {background: url("assets/tex_skyblue.png"); background-size: 100% 100%; color: white;} */
-.texgold {background: linear-gradient(240deg, #ffff80 0%, #ffcc88 60%, #ffff80 100%); color: #c70;}
-.texsilver {background: linear-gradient(240deg, #fff 0%, #ccc 60%, #fff 100%); color: #888;}
-.texbronze {background: linear-gradient(240deg, #c08040 0%, #885818 60%, #c08040 100%); color: #642;}
-.texcyan {background: linear-gradient(240deg, #0cc 0%, #099 60%, #0dd 100%); color: white;}
-.texsky {background: linear-gradient(240deg, #a0c0ff 0%, #8080ff 60%, #a0d0ff 100%); color: white;}
-.buttonturquoise {background-color: rgb(0,220,220); color: white;}
-.buttonturquoise:hover {background-color: rgb(0,200,200); color: white;}
-.buttonturquoise:focus {background-color: rgb(0,100,100); color: white;}
-.buttonlight {background-color: rgb(200,200,200); color: black;}
-.buttonlight:hover {background-color: rgb(230,230,230); color: #555;}
-.buttonlight:focus {background-color: rgb(150,150,150); color: black;}
-.buttonsky {background-color: rgb(120,180,255); color: black;}
-.buttonsky:hover {background-color: rgb(170,220,255); color: #333;}
-.buttonsky:focus {background-color: rgb(100,90,230); color: black;}
-.buttondark {background-color: rgb(16,32,48); color: gray;}
-.buttondark:hover {background-color: rgb(64,96,144); color: white;}
-.buttondark:focus {background-color: rgb(0,4,12); color: #444;}
-button:hover {transform: scale(1.05); box-shadow: 0px 3px 5px rgba(0,0,0,0.5);}
-button:focus {transform: scale(0.95); box-shadow: 0px 0px 5px black;}
-.isbutt0 {padding: 3px 3px 0px 3px; margin-top: 5px; margin-bottom: 5px; vertical-align: middle; border-radius: 12.5px;}
-.isbutt0:hover {transform: scale(1.025); box-shadow: 0px 3px 5px rgba(0,0,0,0.5);}
-button {border-radius: 5px;}
-.curvedge {border-radius: 5px;}
-.curvedge1 {border-radius: 2.5px;}
-.curvedge2 {border-radius: 10px;}
-.curvedge3 {border-radius: 20px;}
-button {font-family: CTRNTLGPGothic;}
-button, .isbutt0 {font-size: 16px; border: none; transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;}
+
+hr {
+    opacity: 50%;
+    width: 90%;
+    margin: 7px 5% 7px 5%;
+    border-top-color: #000;
+    border-bottom-color: #fff;
+}
+
+.scrupy {
+    position: fixed;
+    right: 16px;
+    width: 64px;
+    height: 64px;
+    transition: all 500ms ease 500ms;
+    background-image: url("/assets/scrupy.png");
+    flex: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.toptooltip {
+    position: fixed;
+    right: 16px;
+    width: 320px;
+    height: 96px;
+    transition: all 500ms;
+    background-image: url("/assets/toptooltip.png");
+    flex: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.nodisp {
+    font-size: 0px;
+    visibility: hidden;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 4px;
+}
+
+.smpadding {
+    padding: 8px;
+}
+
+.mdpadding {
+    padding: 16px;
+}
+
+.bigpadding {
+    padding: 24px;
+}
+
+.hugpadding {
+    padding: 32px;
+}
+
+table.tblw, tr.tblw {
+    border: 2px solid white;
+}
+
+th {
+    font-family: WiiNTLGPGothic;
+}
+
+.dbgtxt {
+    font-family: WiiNTLGGothic;
+    font-size: 4px;
+    letter-spacing: 0;
+}
+
+smtxt {
+    font-size: 12px;
+    letter-spacing: .05rem;
+}
+
+a {
+    text-decoration: none;
+    text-decoration-color: none;
+}
+
+code {
+    padding: 5px;
+    letter-spacing: 0;
+    display: block;
+    width: 96%;
+    border: 2px solid gray;
+}
+
+.sbcode {
+    font-family: "Misaki Gothic";
+    background-color: black;
+    color: white;
+}
+
+.stdcode {
+    font-family: WiiNTLGGothic;
+    background-color: white;
+    color: black;
+}
+
+header {
+    position: fixed;
+    top: 0;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+}
+
+header,footer {
+    padding: 5px;
+    font-size: 16px;
+    background-color: rgba(0,0,0,.65);
+    color: white;
+    width: 100%;
+    height: 22px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    box-shadow: 0px 0px 15px black;
+    vertical-align: middle;
+}
+
+.buttondama {
+    background-color: rgba(0,0,0,0.15);
+    color: #eee;
+}
+
+.buttondama:hover {
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+}
+
+.btnl {
+    background-color: rgba(255,255,255,0.15);
+    color: #222;
+}
+
+.btnl.btdisabled {
+    background-color: rgba(255,255,255,1);
+    color: gray;
+}
+
+.btnl:hover:not(.btdisabled) {
+    background-color: rgba(255,255,255,0.5);
+    color: black;
+}
+
+.btnb:not(.btdisabled) {
+    background-color: rgba(200,200,200,0.5);
+    color: #222;
+}
+
+.btnb.btdisabled {
+    background-color: rgba(128,128,128,1);
+    color: black;
+}
+
+.btnb:hover:not(.btdisabled) {
+    background-color: rgba(200,200,200,0.75);
+    color: black;
+}
+
+btn {
+    transition: background-color 0.3s,color 0.3s;
+    padding: 1px 4px 1px 4px;
+    vertical-align: middle;
+}
+
+inbody {
+    display: block;
+    min-height: 90%;
+    width: 90%;
+    margin: 40px 5% 10px 5%;
+    padding: 8px;
+    background-color: rgba(255,255,255,0.875);
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+}
+
+vr:after {
+    margin-left: 5px;
+    margin-right: 5px;
+    content: "|";
+}
+
+/* .texgold{background:url("assets/tex_gold.png");background-size:100% 100%;color:#c70;}
+.texsilver{background:url("assets/tex_silver.png");background-size:100% 100%;color:gray;}
+.texbronze{background:url("assets/tex_bronze.png");background-size:100% 100%;color:#310;}
+.texcyan{background:url("assets/tex_cyan.png");background-size:100% 100%;color:white;}
+.texsky{background:url("assets/tex_skyblue.png");background-size:100% 100%;color:white;}*/
+.texgold {
+    background: linear-gradient(240deg,#ffff80 0%,#ffcc88 60%,#ffff80 100%);
+    color: #a60;
+}
+
+.texsilver {
+    background: linear-gradient(240deg,#fff 0%,#ccc 60%,#fff 100%);
+    color: #666;
+}
+
+.texbronze {
+    background: linear-gradient(240deg,#c08040 0%,#885818 60%,#c08040 100%);
+    color: #431;
+}
+
+.texcyan {
+    background: linear-gradient(240deg,#0cc 0%,#099 60%,#0dd 100%);
+    color: white;
+}
+
+.texsky {
+    background: linear-gradient(240deg,#a0c0ff 0%,#8080ff 60%,#a0d0ff 100%);
+    color: white;
+}
+
+.buttonturquoise {
+    background-color: rgb(0,220,220);
+    color: white;
+}
+
+.buttonturquoise:hover {
+    background-color: rgb(0,200,200);
+    color: white;
+}
+
+.buttonturquoise:focus {
+    background-color: rgb(0,100,100);
+    color: white;
+}
+
+.buttonlight {
+    background-color: rgb(200,200,200);
+    color: black;
+}
+
+.buttonlight:hover {
+    background-color: rgb(230,230,230);
+    color: #555;
+}
+
+.buttonlight:focus {
+    background-color: rgb(150,150,150);
+    color: black;
+}
+
+.buttonsky {
+    background-color: rgb(120,180,255);
+    color: black;
+}
+
+.buttonsky:hover {
+    background-color: rgb(170,220,255);
+    color: #333;
+}
+
+.buttonsky:focus {
+    background-color: rgb(100,90,230);
+    color: black;
+}
+
+.buttondark {
+    background-color: rgb(16,32,48);
+    color: gray;
+}
+
+.buttondark:hover {
+    background-color: rgb(64,96,144);
+    color: white;
+}
+
+.buttondark:focus {
+    background-color: rgb(0,4,12);
+    color: #444;
+}
+
+button:hover:not(.btnb) {
+    transform: scale(1.05);
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.5);
+}
+
+button:focus:not(.btnb) {
+    transform: scale(0.95);
+    box-shadow: 0px 0px 5px black;
+}
+
+.isbutt0 {
+    padding: 3px 3px 0px 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    vertical-align: middle;
+    border-radius: 12.5px;
+}
+
+.isbutt0:hover {
+    transform: scale(1.025);
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.5);
+}
+
+button {
+    border-radius: 5px;
+}
+
+.curvedge {
+    border-radius: 5px;
+}
+
+.curvedge1 {
+    border-radius: 2.5px;
+}
+
+.curvedge2 {
+    border-radius: 10px;
+}
+
+.curvedge3 {
+    border-radius: 20px;
+}
+
+button {
+    font-family: CTRNTLGPGothic,nintendo_NTLG-DB_002,nintendo_NTLG-DB_001,sans-serif!important;
+}
+
+button,.isbutt0 {
+    font-size: 16px;
+    border: none;
+    transition: background-color 0.3s,color 0.3s,transform 0.3s,box-shadow 0.3s;
+}
+
 /* header icons */
-.ntlghome:after {content: '\e073';} /* Citra font only */
-.ntlgbutta:after {content: '\e000';} /* A button */
-.ntlgbuttb:after {content: '\e001';} /* B button */
-.ntlgbuttx:after {content: '\e002';} /* X button */
-.ntlgbutty:after {content: '\e003';} /* Y button */
-.ntlgbuttl:after {content: '\e004';} /* L button */
-.ntlgbuttr:after {content: '\e005';} /* R button */
-.ntlgdpad:after {content: '\e006';} /* directional pad */
-.ntlgdpadl:after {content: '\e041';} /* directional pad with lines */
-.ntlgqblock:after {content: '\e06b';} /* question mark block */
-.ntlgback:after {content: '\e072';} /* back arrow */
+
+/* Citra font only */
+.ntlghome:after {
+    content: '\e073';
+}
+
+/* A button */
+.ntlgbutta:after {
+    content: '\e000';
+}
+
+/* B button */
+.ntlgbuttb:after {
+    content: '\e001';
+}
+
+/* X button */
+.ntlgbuttx:after {
+    content: '\e002';
+}
+
+/* Y button */
+.ntlgbutty:after {
+    content: '\e003';
+}
+
+/* L button */
+.ntlgbuttl:after {
+    content: '\e004';
+}
+
+/* R button */
+.ntlgbuttr:after {
+    content: '\e005';
+}
+
+/* directional pad */
+.ntlgdpad:after {
+    content: '\e006';
+}
+
+/* directional pad with lines */
+.ntlgdpadl:after {
+    content: '\e041';
+}
+
+/* question mark block */
+.ntlgqblock:after {
+    content: '\e06b';
+}
+
+/* back arrow */
+.ntlgback:after {
+    content: '\e072';
+}
+
 /* font definition */
-@font-face {font-family: CTRNTLGPGothic; src: url('assets/fonts/CTRNTLGPGothic.ttf');} /* 3DS browser font */
-@font-face {font-family: WiiNTLGPGothic; src: url('assets/fonts/WiiNTLGPGothic.ttf');} /* Wii font */
-@font-face {font-family: WiiNTLGGothic; src: url('assets/fonts/WiiNTLGGothic.ttf');} /* Wii's font but monospace */
-@font-face {font-family: 'Misaki Gothic'; src: url('assets/fonts/MisakiGothic.ttf');} /* SmileBASIC font */
+
+/* 3DS browser font */
+@font-face {
+    font-family: CTRNTLGPGothic;
+    src: url('assets/fonts/CTRNTLGPGothic.ttf');
+}
+
+/* Wii font */
+@font-face {
+    font-family: WiiNTLGPGothic;
+    src: url('assets/fonts/WiiNTLGPGothic.ttf');
+}
+
+/* Wii font but monospace */
+@font-face {
+    font-family: WiiNTLGGothic;
+    src: url('assets/fonts/WiiNTLGGothic.ttf');
+}
+
+/* SmileBASIC font */
+@font-face {
+    font-family: 'Misaki Gothic';
+    src: url('assets/fonts/MisakiGothic.ttf');
+}

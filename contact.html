@@ -10,13 +10,13 @@
 			Contact - サイバーヨッシー64
 		</title>
 	</head>
-	<body>
+	<body onscroll="scr()">
 		<div id="pagec0" class="pagecontent">
 		<a name="pagetop"></a>
 		<inbody>
 			<center>
-				<h1>Contact information</h1>
-        <hr style="margin-bottom: 3px;">
+				<h1 style="margin: 20px;">Contact information</h1>
+        <hr style="margin: 10px 5% 5px 5%;">
         <p style="margin: 0px;"><font size=-1>If you need help or just chat a bit with me, below is a list of social media platforms where I'm accessible.</font></p>
         <hr>
 				<table width=75% style="border: none; background-color: none;">
@@ -33,6 +33,9 @@
             <td>Twitter</td>
             <td><a href="https://twitter.com/CyberYoshi64" target="_blank">CyberYoshi64</a></td>
           </tr>
+          <tr>
+          	<td></td>
+          </tr>
         </table>
 			</center>
 		</inbody>
@@ -46,21 +49,21 @@
 					<span class="ntlghome"></span> HOME
 				</button>
 			</a>
-			&nbsp;▶ サカキバラUI
+			&nbsp;▶ Contact information
 		</header>
 		<footer>
-			<a href="404.html">
-				<button class="buttondama" style="position: fixed; bottom: 5px; left: 5px;">
-					Show 404
-				</button>
-			</a>
+			<div id="toptool" class="toptooltip" style="bottom: 136px; opacity: 0;">
+					<table width=100% height=80px><tr><td style="font-size: 12px;"><center>Click this button to the top of the page.</center></td></tr></table>
+			</div>
+			<div id="totop" class="scrupy" onmouseover="shtoptoolt()" onmouseout="hdtoptoolt()" onclick="scup()" style="bottom: -64px; opacity: 0;"></div>
+
 			<center>2019 サイバーヨッシー６４</center>
-			<a href="contact.html">
-				<button class="buttondama" style="position: fixed; bottom: 5px; right: 5px;">
-					Contact
-				</button>
-			</a>
 		</footer>
 	</div>
+	<script>
+			document.body.innerHTML=document.body.innerHTML.replace(/^\s+|\s+$/gm,'')
+	</script>
+	<script src="./style.js"></script>
+
 	</body>
 </html>

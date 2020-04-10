@@ -1,53 +1,138 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-		<link href="common.css" rel="stylesheet">
-		<link href="assets/favicon16.png" size="16x16" rel="shortcut icon">
-		<link href="assets/favicon192.png" size="192x192" rel="shortcut icon">
-		<title>
-			サカキバラUI - サイバーヨッシー64
-		</title>
-	</head>
-	<body>
-		<div id="pagec0" class="pagecontent">
-		<a name="pagetop"></a>
-		<inbody>
-			<center>
-				<h1><img src="assets/skkbauilogo.png" width="30%" class="curvedge2" alt="サカキバラUI"></h1>
-				サカキバラUI is a Windows-themed user interface with generic functionality.<br>
-				<p>SmileBASIC Source page: <a href="http://smilebasicsource.com/page?pid=1030">Click here</a></p>
-				<p>Dev thread on <span title="SmileBASIC Source">SBS: </span><a href="http://smilebasicsource.com/forum?ftid=1635">Click here</a></p>
-				<br>
-				<table class="curvedge2 texcyan"><td><smtxt><img src="assets/skkbauiscrshot.bmp" class="curvedge2 dbgtxt" alt="assets/skkbauiscrshot.bmp not found or your browser doesn't use BMPs lol"><br><center>This is a screenshot of an earlier build.</center></smtxt></td></table>
-			</center>
-		</inbody>
-		<a name="foot"></a>
-		<header>
-			<font color="#39F">サイバーヨッシー</font>
-			<font color="#E32">64</font>
-			<vr></vr>
-			<a href="index.html">
-				<button class="buttondama">
-					<span class="ntlghome"></span> HOME
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link href="common.css" rel="stylesheet">
+        <link href="assets/favicon16.png" size="16x16" rel="shortcut icon">
+        <link href="assets/favicon192.png" size="192x192" rel="shortcut icon">
+        <title>サカキバラUI - サイバーヨッシー64</title>
+        <style>
+            .divf0 {
+                font-size: 18px;
+            }
+
+            .divs {
+                background-color: rgba(64,128,255,.5);
+                overflow: hidden;
+                transition: height 500ms, box-shadow 500ms;
+            }
+
+            .div0 {
+                --div0: calc( 5 * 1em + 72px);
+                font-size: 0.975em;
+                border-radius: 16px;
+                letter-spacing: normal;
+                width: 200px;
+                margin: 16px 0px 16px 0px;
+            }
+        </style>
+        <!-- <script src="./errhandle.js"></script> -->
+    </head>
+    <body onscroll="scr()">
+        <div id="pagec0" class="pagecontent">
+            <a name="pagetop"></a>
+            <inbody>
+                <center>
+                    <h1>
+                        <img src="assets/skkbauilogo.png" width="256px" class="curvedge2" alt="サカキバラUI">
+                    </h1>
+                    <p>サカキバラUI is a Windows-themed user interface with generic functionality.</p>
+                    <p>SmileBASIC Source page: <a href="http://smilebasicsource.com/page?pid=1030">Click here</a></p>
+                    <p>Dev thread on <span title="SmileBASIC Source">SBS: </span><a href="http://smilebasicsource.com/forum?ftid=1635">Click here</a></p>
+                    <br>
+                    <table class="curvedge2 texbronze">
+                        <td>
+                            <smtxt>
+                                <img src="assets/skkbauiscrshot.png" class="curvedge2 dbgtxt" alt="assets/skkbauiscrshot.png not found">
+                                <br>
+                                <center style="color:white;">サカキバラUI ver. 0.3.6 screenshot</center>
+                            </smtxt>
+                        </td>
+                    </table>
+                    <hr>
+                    <button id="divf0" class="btnb divf0" onclick="sohdiv0()"> Current status</button>
+                    <div id="div0" class="divs div0" align=left style="height: 3px;">
+                        <table width="100%" class="smpadding">
+                            <tr>
+                                <td>
+                                    <center>
+                                        Version: 0.3.6<hr>
+                                        Available as:<br>
+                                        <span style="color: purple;">SmileBASIC: 51VVV3NJ</span>
+                                        <br>
+                                        <a href="https://github.com/CyberYoshi64/SKKBAUI-prv/releases/latest/download/raw.tar">Github TAR download</a>
+                                        <hr>
+                                        <a href="https://sbapi.me/get/51VVV3NJ/TCHANGELOG_EN/code">View changelog</a>
+                                    </center>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <hr>
+                </center>
+            </inbody>
+            <a name="foot"></a>
+            <header>
+                <font color="#39F">サイバーヨッシー</font>
+                <font color="#E32">64</font>
+                <vr></vr>
+                <a href="index.html">
+                    <button class="buttondama">
+                        <span class="ntlghome"></span>
+                        HOME
+
+                    </button>
+                </a>
+                &nbsp;▶ サカキバラUI
+
+            </header>
+            <footer>
+              <div id="toptool" class="toptooltip" style="bottom: 136px; opacity: 0;">
+                  <table width=100% height=80px><tr><td style="font-size: 12px;"><center>Click this button to the top of the page.</center></td></tr></table>
+              </div>
+              <div id="totop" class="scrupy" onmouseover="shtoptoolt()" onmouseout="hdtoptoolt()" onclick="scup()" style="bottom: -64px; opacity: 0;"></div>
+          			<button class="buttondama" style="position: fixed; bottom: 5px; left: 5px;"></button>
+                <center>2019 サイバーヨッシー６４</center>
+                <a href="contact.html">
+                    <button class="buttondama" style="position: fixed; bottom: 5px; right: 5px;">Contact
 				</button>
-			</a>
-			&nbsp;▶ サカキバラUI
-		</header>
-		<footer>
-			<a href="404.html">
-				<button class="buttondama" style="position: fixed; bottom: 5px; left: 5px;">
-					Show 404
-				</button>
-			</a>
-			<center>2019 サイバーヨッシー６４</center>
-			<a href="contact.html">
-				<button class="buttondama" style="position: fixed; bottom: 5px; right: 5px;">
-					Contact
-				</button>
-			</a>
-		</footer>
-	</div>
-	</body>
+                </a>
+            </footer>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <script>
+						document.body.innerHTML=document.body.innerHTML.replace(/^\s+|\s+$/gm,'')
+            var div0 = document.getElementById("div0");
+            var divf0 = document.getElementById("divf0");
+            var csstxt = "width: 200px;"
+            var str0 = "\n\nSome buttons may throw errors at you."
+            if (div0 == null) {
+                alert("div0 is not what I expected." + str0);
+            }
+            if (divf0 == null) {
+                alert("divf0 is not what I expected." + str0);
+            }
+            function enablebtn() {
+                divf0.classList.remove("btdisabled");
+            }
+            function sohdiv0() {
+                if (divf0.classList.contains("btdisabled") == false) {
+                    if (divf0.textContent.startsWith("") == true) {
+                        divf0.textContent = " Current status";
+                        div0.setAttribute("style", csstxt + "height: var(--div0); box-shadow: 0px 5px 20px black");
+                    } else {
+                        divf0.textContent = " Current status";
+                        div0.setAttribute("style", csstxt + "height: 2px; box-shadow: 0px 0px 0px black");
+                    };
+                    window.setTimeout(enablebtn, 250);
+                    divf0.classList.add("btdisabled");
+                };
+            }
+        </script>
+        <script src="style.js"></script>
+
+    </body>
 </html>

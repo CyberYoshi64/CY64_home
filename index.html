@@ -10,7 +10,9 @@
 		<title>
 			HOME - サイバーヨッシー64
 		</title>
-		<body>
+		<!-- <script src="./errhandle.js"></script> -->
+	</head>
+		<body onscroll="scr()">
 		<div id="pagec0" class="pagecontent">
         <span class="nodisp">The "common.css" file went missing. So enjoy the 80's HTML, I guess.<br></span>
 		<a name="pagetop"></a>
@@ -19,9 +21,9 @@
 				<th align=left style="vertical-align: middle; padding: 5px;"><img src="assets/sb.smdh.png" class=curvedge1 width="18px" alt="assets/sb.smdh.png not found"> My SmileBASIC projects - sorted by poularity (state: 9/2019)</th>
 					<tr>
 						<td>
-							<a href="sb_cy1_skkbaui.html" title="This UI is a mixture of Windows and the DSi Menu. Click this button for more infos."><table width="96%" height="48px" align=center class="isbutt0 texgold"><td class="dbgtxt" width="48px"><img src="assets/skkbaui.png" class=curvedge width=48 height=48 alt="assets/skkba.png not found"></td><td>サカキバラUI - A user interface for SmileBASIC 3</td><td width=32px style="font-size: 20px;">▶</td></table></a>
-							<a href="sb_cy3_6x8fnt.html" title="This page is currently unavaialble due to the page still being written. Please be patient."><table width="96%" height="48px" align=center class="isbutt0 texsilver"><td class="dbgtxt" width="48px"><img src="assets/sb6x8fntpk.png" class=curvedge width=48 height=48 alt="assets/sb6x8fntpk.png not found"></td><td>サイバーヨッシー64's 6x8 font package for SmileBASIC 3</td><td width=32px style="font-size: 20px;">▶</td></table></a>
-							<a href="sb_cy2_jmpkun.html" title="This page is currently unavaialble due to the page still being written. Please be patient."><table width="96%" height="48px" align=center class="isbutt0 texbronze"><td class="dbgtxt" width="48px"><img src="assets/cy64prj2.png" class=curvedge width=48 height=48 alt="assets/cy64prj2.png not found"></td><td>CY64 project 02 - Jump'n'Run project for SmileBASIC 3</td><td width=32px style="font-size: 20px;">▶</td></table></a>
+							<a href="sb_cy1_skkbaui.html" title="This UI is a mixture of Windows and the DSi Menu."><table width="96%" height="48px" align=center class="isbutt0 texgold"><td class="dbgtxt" width="48px"><img src="assets/skkbaui.png" class=curvedge width=48 height=48 alt="assets/skkba.png not found"></td><td>サカキバラUI - A user interface for SmileBASIC 3</td><td width=32px style="font-size: 20px;">▶</td></table></a>
+							<a href="sb_cy2_6x8fnt.html" title="This font pack will make text in SmileBASIC look better."><table width="96%" height="48px" align=center class="isbutt0 texsilver"><td class="dbgtxt" width="48px"><img src="assets/sb6x8fntpk.png" class=curvedge width=48 height=48 alt="assets/sb6x8fntpk.png not found"></td><td>サイバーヨッシー64's 6x8 font package for SmileBASIC 3</td><td width=32px style="font-size: 20px;">▶</td></table></a>
+							<a href="sb_cy3_jmpkun.html" title="This game a Super Mario Bros. triology mix."><table width="96%" height="48px" align=center class="isbutt0 texbronze"><td class="dbgtxt" width="48px"><img src="assets/cy64prj2.png" class=curvedge width=48 height=48 alt="assets/cy64prj2.png not found"></td><td>CY64 project 02 - Jump'n'Run project for SmileBASIC 3</td><td width=32px style="font-size: 20px;">▶</td></table></a>
 							<a href="http://smilebasic.com/en" title="Click this to get to the official SmileBASIC web page" target="_blank"><table width="96%" height="24px" align=center class="isbutt0 texcyan"><td width="48px"><center><img src="assets/helpq.png" class=curvedge alt="" width=24px></center></td><td>What is SmileBASIC?</td><td width=32px style="font-size: 20px;">◆</td></table></a>
 						</td>
 					</tr>
@@ -34,8 +36,12 @@
 			<vr></vr>
 			<span class=ntlghome></span> HOME
 		</header>
-		<br>
 		<footer>
+		          <div id="toptool" class="toptooltip" style="bottom: 136px; opacity: 0;">
+                  <table width=100% height=80px><tr><td style="font-size: 12px;"><center>Click this button to the top of the page.</center></td></tr></table>
+              </div>
+              <div id="totop" class="scrupy" onmouseover="shtoptoolt()" onmouseout="hdtoptoolt()" onclick="scup()" style="bottom: -64px; opacity: 0;"></div>
+
 			<a href="404.html">
 				<button class="buttondama" style="position: fixed; bottom: 2px; left: 0;"></button>
 			</a>
@@ -45,5 +51,10 @@
 			</a>
 		</footer>
 		</div>
+		<script>
+				document.body.innerHTML=document.body.innerHTML.replace(/^\s+|\s+$/gm,'')
+		</script>
+		<script src="./style.js"></script>
+		<!--<script src="./addsbtools.js"></script>-->
 	</body>
 </html>
