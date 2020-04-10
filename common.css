@@ -26,7 +26,7 @@ hr {
     width: 64px;
     height: 64px;
     transition: all 500ms ease 500ms;
-    background-image: url("/assets/scrupy.png");
+    background-image: url("./assets/scrupy.png");
     flex: none;
     overflow: hidden;
     z-index: -1;
@@ -38,7 +38,7 @@ hr {
     width: 320px;
     height: 96px;
     transition: all 500ms;
-    background-image: url("/assets/toptooltip.png");
+    background-image: url("./assets/toptooltip.png");
     flex: none;
     overflow: hidden;
     z-index: -1;
@@ -404,23 +404,23 @@ button,.isbutt0 {
 /* 3DS browser font */
 @font-face {
     font-family: CTRNTLGPGothic;
-    src: url('assets/fonts/CTRNTLGPGothic.ttf');
+    src: url('./assets/fonts/CTRNTLGPGothic.ttf');
 }
 
 /* Wii font */
 @font-face {
     font-family: WiiNTLGPGothic;
-    src: url('assets/fonts/WiiNTLGPGothic.ttf');
+    src: url('./assets/fonts/WiiNTLGPGothic.ttf');
 }
 
 /* Wii font but monospace */
 @font-face {
     font-family: WiiNTLGGothic;
-    src: url('assets/fonts/WiiNTLGGothic.ttf');
+    src: url('./assets/fonts/WiiNTLGGothic.ttf');
 }
 
 /* SmileBASIC font */
 @font-face {
     font-family: 'Misaki Gothic';
-    src: url('assets/fonts/MisakiGothic.ttf');
+    src: url('./assets/fonts/MisakiGothic.ttf');
 }
