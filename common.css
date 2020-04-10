@@ -25,7 +25,7 @@ hr {
     right: 16px;
     width: 64px;
     height: 64px;
-    transition: all 500ms ease 500ms;
+    transition: bottom 500ms, opacity 250ms;
     background-image: url("./assets/scrupy.png");
     flex: none;
     overflow: hidden;
@@ -37,7 +37,7 @@ hr {
     right: 16px;
     width: 320px;
     height: 96px;
-    transition: all 500ms;
+    transition: right 500ms, opacity 250ms;
     background-image: url("./assets/toptooltip.png");
     flex: none;
     overflow: hidden;
