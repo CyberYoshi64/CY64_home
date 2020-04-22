@@ -1,15 +1,16 @@
 html,body {
+    --text-color: black;
     scroll-behavior: smooth;
     user-select: none;
     background: linear-gradient(135deg,#fff8f0 0%,#ffeecc 100%);
     min-height: 100vh;
+    color: var(--text-color);
     font-size: 14px;
     font-family: CTRNTLGPGothic,nintendo_NTLG-DB_002,nintendo_NTLG-DB_001,sans-serif!important;
     margin: 0px;
     padding: 0px;
     width: 100vw;
     overflow-x: hidden;
-    line-height: 1.25em;
 }
 
 hr {
@@ -37,7 +38,7 @@ hr {
     right: 16px;
     width: 320px;
     height: 96px;
-    transition: right 500ms, opacity 250ms;
+    transition: right 250ms, opacity 250ms;
     background-image: url("./assets/toptooltip.png");
     flex: none;
     overflow: hidden;
@@ -47,6 +48,7 @@ hr {
 .nodisp {
     font-size: 0px;
     visibility: hidden;
+    position: absolute;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -90,7 +92,12 @@ smtxt {
 
 a {
     text-decoration: none;
-    text-decoration-color: none;
+    color: var(--text-color);
+}
+
+.anodec{
+    text-decoration: none;
+    color: var(--text-color);
 }
 
 code {
@@ -187,9 +194,9 @@ inbody {
     display: block;
     min-height: 90%;
     width: 90%;
-    margin: 40px 5% 10px 5%;
-    padding: 8px;
-    background-color: rgba(255,255,255,0.875);
+    margin: 40px 5% 40px 5%;
+    padding: 10px;
+    background-color: rgba(255,255,255,0.9);
     box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
 }
 
@@ -225,8 +232,18 @@ vr:after {
 }
 
 .texsky {
-    background: linear-gradient(240deg,#a0c0ff 0%,#8080ff 60%,#a0d0ff 100%);
+    background: linear-gradient(240deg,#a0a0ff 0%,#6098ff 60%,#99b3ff 100%);
     color: white;
+}
+
+.texblue {
+    background: linear-gradient(240deg,#6060ff 0%,#9999ff 60%,#7777ff 100%);
+    color: white;
+}
+
+.texgreen {
+    background: linear-gradient(240deg,#60a080 0%,#99c098 60%,#77ffa0 100%);
+    color: green;
 }
 
 .buttonturquoise {
