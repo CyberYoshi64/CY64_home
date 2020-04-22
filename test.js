@@ -1,4 +1,4 @@
-var isover = 0;
+var isover=0;
 var canvas=document.getElementById("canvas");
 var c2d=canvas.getContext("2d");
 var pxarr=new Uint16Array(64);
