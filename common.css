@@ -13,6 +13,11 @@ html,body {
     overflow-x: hidden;
 }
 
+p {
+		margin-top: 12px;
+		margin-bottom: 12px;
+}
+
 hr {
     opacity: 50%;
     width: 90%;
@@ -237,13 +242,18 @@ vr:after {
 }
 
 .texblue {
-    background: linear-gradient(240deg,#6060ff 0%,#9999ff 60%,#7777ff 100%);
+    background: linear-gradient(240deg,#2060ff 0%,#3099ff 60%,#1877ff 100%);
     color: white;
 }
 
 .texgreen {
     background: linear-gradient(240deg,#60a080 0%,#99c098 60%,#77ffa0 100%);
     color: green;
+}
+
+.texred {
+    background: linear-gradient(240deg,#a01810 0%,#ff2010 60%,#881408 100%);
+    color: white;
 }
 
 .buttonturquoise {

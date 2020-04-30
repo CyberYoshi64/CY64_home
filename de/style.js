@@ -1,7 +1,7 @@
 var scrolled=false;
 
 function scup() {
-  if (topy.style.bottom == "48px"){scrolled=true; topty.innerHTML='<table width=100% height=80px><tr><td style="font-size: 12px;"><center>Returning...</center></td></tr></table>'; scrollTo(0,0);}
+  if (topy.style.bottom == "48px"){scrolled=true; topty.innerHTML='<table width=100% height=80px><tr><td style="font-size: 12px;"><center>Es wird zurückgekehrt...</center></td></tr></table>'; scrollTo(0,0);}
   scrolled=false;
 }
 var topy=document.getElementById("totop")
@@ -9,7 +9,7 @@ var topty=document.getElementById("toptool")
 
 function scr() {
   console.log("scrolled. y="+scrollY);
-  if (window.scrollY < 300) {
+  if (window.scrollY < 1000) {
     scrup0();
     hdtoptoolt();
   }else{
@@ -33,7 +33,7 @@ function shtoptoolt() {
     topty.style.right="16px"
     topty.style.opacity="1";
     topty.style.zIndex="1"
-    topty.innerHTML='<table width=100% height=80px><tr><td style="font-size: 12px;"><center>Click this button to the top of the page.</center></td></tr></table>'
+    topty.innerHTML='<table width=100% height=80px><tr><td style="font-size: 12px;"><center>Klicke hier, um nach oben zu gelangen.</center></td></tr></table>'
   }
 }
 
