@@ -9,7 +9,7 @@ var topty=document.getElementById("toptool")
 
 function scr() {
   console.log("scrolled. y="+scrollY);
-  if (window.scrollY < 1000) {
+  if (window.scrollY < 720) {
     scrup0();
     hdtoptoolt();
   }else{

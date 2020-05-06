@@ -21,7 +21,7 @@ p {
 hr {
     opacity: 50%;
     width: 90%;
-    margin: 7px 5% 7px 5%;
+    margin: 7px 5vw 7px 5vw;
     border-top-color: #000;
     border-bottom-color: #fff;
 }
@@ -197,9 +197,9 @@ btn {
 
 inbody {
     display: block;
-    min-height: 90%;
-    width: 90%;
-    margin: 40px 5% 40px 5%;
+    height: calc(100% - 80px);
+    width: 87.5vw;
+    margin: 40px 5vw 40px 5vw;
     padding: 10px;
     background-color: rgba(255,255,255,0.9);
     box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
@@ -358,7 +358,14 @@ button {
 .curvedge3 {
     border-radius: 20px;
 }
-
+.width48 {
+  width: 48px;
+  height: 48px;
+}
+.width32 {
+  width: 32px;
+  height: 32px;
+}
 button {
     font-family: CTRNTLGPGothic,nintendo_NTLG-DB_002,nintendo_NTLG-DB_001,sans-serif!important;
 }
@@ -450,4 +457,35 @@ button,.isbutt0 {
 @font-face {
     font-family: 'Misaki Gothic';
     src: url('./assets/fonts/MisakiGothic.ttf');
+}
+
+@media only screen and (max-width: 800px) {
+  table {
+    max-width: calc(100vw - 20px);
+  }
+  img {
+    max-width: 100%;
+  }
+  body{
+    font-size: 12px;
+  }
+  inbody {
+    width: calc(100vw - 20px);
+    margin: 40px 0px 40px 0px;
+  }
+  header,footer {
+      font-size: 14px;
+      height: 20px;
+  }
+  button,.isbutt0 {
+      font-size: 14px;
+  }
+  .width48 {
+    width: 36px;
+    height: 36px;
+  }
+  .width32 {
+    width: 24px;
+    height: 24px;
+  }
 }
