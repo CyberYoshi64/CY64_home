@@ -6,11 +6,15 @@ html,body {
     min-height: 100vh;
     color: var(--text-color);
     font-size: 14px;
-    font-family: CTRNTLGPGothic,nintendo_NTLG-DB_002,nintendo_NTLG-DB_001,sans-serif!important;
+    font-family: CTRNTLG,nintendo_NTLG-DB_002,nintendo_NTLG-DB_001,sans-serif!important;
     margin: 0px;
     padding: 0px;
     width: 100vw;
     overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5,h6{
+		font-family: CTRNTLGE;
 }
 
 p {
@@ -81,11 +85,11 @@ table.tblw, tr.tblw {
 }
 
 th {
-    font-family: WiiNTLGPGothic;
+    font-family: WiiNTLG;
 }
 
 .dbgtxt {
-    font-family: WiiNTLGGothic;
+    font-family: WiiNTLGmono;
     font-size: 4px;
     letter-spacing: 0;
 }
@@ -120,7 +124,7 @@ code {
 }
 
 .stdcode {
-    font-family: WiiNTLGGothic;
+    font-family: WiiNTLGmono;
     background-color: white;
     color: black;
 }
@@ -367,7 +371,7 @@ button {
   height: 32px;
 }
 button {
-    font-family: CTRNTLGPGothic,nintendo_NTLG-DB_002,nintendo_NTLG-DB_001,sans-serif!important;
+    font-family: CTRNTLG,nintendo_NTLG-DB_002,nintendo_NTLG-DB_001,sans-serif!important;
 }
 
 button,.isbutt0 {
@@ -435,22 +439,28 @@ button,.isbutt0 {
 
 /* font definition */
 
-/* 3DS browser font */
+/* 3DS browser font but excluding kanjis */
 @font-face {
-    font-family: CTRNTLGPGothic;
-    src: url('./assets/fonts/CTRNTLGPGothic.ttf');
+    font-family: CTRNTLG;
+    src: url('./assets/fonts/CTRNTLG-DB.ttf');
+}
+
+/* 3DS browser font but wider and excluding kanjis */
+@font-face {
+    font-family: CTRNTLGE;
+    src: url('./assets/fonts/CTRNTLG-ExDB.ttf');
 }
 
 /* Wii font */
 @font-face {
-    font-family: WiiNTLGPGothic;
-    src: url('./assets/fonts/WiiNTLGPGothic.ttf');
+    font-family: WiiNTLG;
+    src: url('./assets/fonts/WiiNTLG-R.ttf');
 }
 
 /* Wii font but monospace */
 @font-face {
-    font-family: WiiNTLGGothic;
-    src: url('./assets/fonts/WiiNTLGGothic.ttf');
+    font-family: WiiNTLGmono;
+    src: url('./assets/fonts/WiiNTLGmono-R.ttf');
 }
 
 /* SmileBASIC font */
