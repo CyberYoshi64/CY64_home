@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Map editor 0.0.1</title>
+    <script src="map.js" charset="utf-8"></script>
+    <script src="lib/file_rw.js" charset="utf-8"></script>
+    <script src="lib/p5.js" charset="utf-8"></script>
+    <script src="lib/p5.dom.js" charset="utf-8"></script>
+    <script src="lib/p5.sound.js" charset="utf-8"></script>
+    <style media="screen">
+      body{user-select: none;}
+      /* canvas#defaultCanvas0{ width: 90%; height: 75%; overflow: scroll;} */
+    </style>
+  </head>
+  <body>
+    Load map file:
+    <input type="file" onchange="loadFileAsBuf(this)"></input><br>
+    Save map file: <button id="savefile">Generate lvl1-1.dat</button>
+    <p id="flpr0"></p>
+  </body>
+</html>

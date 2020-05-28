@@ -23,11 +23,11 @@ p {
 }
 
 hr {
-    opacity: 50%;
+    opacity: 1;
     width: 90%;
-    margin: 7px 5vw 7px 5vw;
-    border-top-color: #000;
-    border-bottom-color: #fff;
+    margin: 7px 5% 7px 5%;
+    border-top-color: rgba(0, 0, 0, 0.5);
+    border-bottom-color: rgba(255, 255, 255, 0.5);
 }
 
 .scrupy {
