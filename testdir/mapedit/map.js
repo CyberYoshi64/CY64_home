@@ -8,17 +8,17 @@ function preload() {
   gamemap[3]=":".charCodeAt()
   gamemap[4]=200
   gamemap[5]=75
-  gamemap[6]=64
-  gamemap[7]=64
-  //fnt=loadFont("./assets/std.ttf")
-  fnt=loadFont("./assets/c.ttf")
+  gamemap[6]=64 //        magic 64
+  gamemap[7]=64 //another magic 64
+  fnt=loadFont("./assets/std.ttf")
+  //fnt=loadFont("./assets/c.ttf")
 }
 
 function setup() {
   window.canvas = createCanvas(200*8,75*8+24)
   pixelDensity(1)
   textFont(fnt)
-  window.canvas.canvas.style="background-color: #08f; border: 5px solid black;"
+  window.canvas.canvas.style="background-color: #000; border: 5px solid black;"
 }
 function draw(){
   getMouse()
@@ -36,7 +36,10 @@ function draw(){
         g=((c>>5)%32)*8
         b=(c%32)*8
         fill(r,g,b); noStroke()
-        rect(((i/2-4)%200)*8,Math.floor((i/2-4)/200)*8,8,8)
+        rect(((i/2-4)%200)*8,Math.floor((i/2-4)/200)*8,7,7)
+      } else {
+        fill(0,128,255); noStroke()
+        rect(((i/2-4)%200)*8+1,Math.floor((i/2-4)/200)*8+1,6,6)
       }
     }
   } else {
@@ -70,12 +73,17 @@ function draw(){
   rect(0,75*8,200*8,24)
   fill(255); textSize(16); textAlign(LEFT,TOP)
   text("Clear map",8,75*8+2)
+  if (mouseX>0 && mouseY>75*8 && mouseX<97 && mouseY<75*8+23 && lclick){
+    console.log(alert("Do you want to continue"))
+  }
   if (mouseX>96 && mouseY>75*8 && mouseX<231 && mouseY<75*8+23 && lclick){
     mode=(mode+1) % 2
   }
   fill(!mode*255); rect(96,75*8,128,24)
   fill(mode*255); text("Change color",105,75*8+2)
   fill(255); text("lol :) "+mouseX+","+mouseY,228,75*8+2)
+  fill(255); stroke(0); rect(mouseX-4,mouseY-4,10,10)
+
 }
 
 function getMouse(){

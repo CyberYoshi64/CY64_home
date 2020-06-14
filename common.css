@@ -1,16 +1,60 @@
-html,body {
+html, body {
     --text-color: black;
     scroll-behavior: smooth;
     user-select: none;
-    background: linear-gradient(135deg,#fff8f0 0%,#ffeecc 100%);
-    min-height: 100vh;
+    background-color: #fca;
     color: var(--text-color);
     font-size: 14px;
     font-family: CTRNTLG,nintendo_NTLG-DB_002,nintendo_NTLG-DB_001,sans-serif!important;
     margin: 0px;
     padding: 0px;
-    width: 100vw;
     overflow-x: hidden;
+}
+
+#pagec0 {
+  margin: 0px; padding: 0px;
+  background-color: rgba(255,255,255,0.9);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  position: absolute;
+  right: 0px;
+  top: 32px;
+  width: calc(100% - 256px);
+  min-height: calc(100vh - 64px);
+}
+
+#pagec1 {
+  margin-top: 32px; padding: 0px;
+  background-color: rgba(255,255,255,0.9);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  width: 100%;
+  min-height: calc(100vh - 64px);
+}
+
+.pageindex{
+  background-color: rgba(255,255,255,.75);
+  box-shadow: 0 0 5px black;
+  position: fixed;
+  left: 0px;
+  top: 32px;
+  width: 256px;
+  height: calc(100vh - 64px);
+}
+
+.pageindex button {
+  width: 100%;
+  min-height: 20px;
+  transition: background-color 250ms, color 250ms;
+  border: 0px solid black;
+  background-color: rgba(0,0,0,.125);
+}
+
+.pageindex button:hover {
+  background-color: rgba(0,0,0,.25);
+}
+
+.pageindex button:active {
+  background-color: rgba(0,0,0,.5);
+  color: white;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -202,11 +246,9 @@ btn {
 inbody {
     display: block;
     height: calc(100% - 80px);
-    width: 87.5vw;
-    margin: 40px 5vw 40px 5vw;
+    width: calc(100% - 20px);
+    margin: 0;
     padding: 10px;
-    background-color: rgba(255,255,255,0.9);
-    box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
 }
 
 vr:after {
@@ -215,11 +257,6 @@ vr:after {
     content: "|";
 }
 
-/* .texgold{background:url("assets/tex_gold.png");background-size:100% 100%;color:#c70;}
-.texsilver{background:url("assets/tex_silver.png");background-size:100% 100%;color:gray;}
-.texbronze{background:url("assets/tex_bronze.png");background-size:100% 100%;color:#310;}
-.texcyan{background:url("assets/tex_cyan.png");background-size:100% 100%;color:white;}
-.texsky{background:url("assets/tex_skyblue.png");background-size:100% 100%;color:white;}*/
 .texgold {
     background: linear-gradient(240deg,#ffff80 0%,#ffcc88 60%,#ffff80 100%);
     color: #a60;
@@ -270,7 +307,7 @@ vr:after {
     color: white;
 }
 
-.buttonturquoise:focus {
+.buttonturquoise:active {
     background-color: rgb(0,100,100);
     color: white;
 }
@@ -285,7 +322,7 @@ vr:after {
     color: #555;
 }
 
-.buttonlight:focus {
+.buttonlight:active {
     background-color: rgb(150,150,150);
     color: black;
 }
@@ -300,7 +337,7 @@ vr:after {
     color: #333;
 }
 
-.buttonsky:focus {
+.buttonsky:active {
     background-color: rgb(100,90,230);
     color: black;
 }
@@ -315,17 +352,17 @@ vr:after {
     color: white;
 }
 
-.buttondark:focus {
+.buttondark:active {
     background-color: rgb(0,4,12);
     color: #444;
 }
 
-button:hover:not(.btnb) {
+header button:hover:not(.btnb), footer button:hover:not(.btnb) {
     transform: scale(1.05);
     box-shadow: 0px 3px 5px rgba(0,0,0,0.5);
 }
 
-button:focus:not(.btnb) {
+header button:active:not(.btnb), footer button:active:not(.btnb) {
     transform: scale(0.95);
     box-shadow: 0px 0px 5px black;
 }
@@ -343,7 +380,7 @@ button:focus:not(.btnb) {
     box-shadow: 0px 3px 5px rgba(0,0,0,0.5);
 }
 
-button {
+header button, footer button {
     border-radius: 5px;
 }
 
@@ -374,7 +411,7 @@ button {
     font-family: CTRNTLG,nintendo_NTLG-DB_002,nintendo_NTLG-DB_001,sans-serif!important;
 }
 
-button,.isbutt0 {
+header button, footer button, .isbutt0 {
     font-size: 16px;
     border: none;
     transition: background-color 0.3s,color 0.3s,transform 0.3s,box-shadow 0.3s;
@@ -471,7 +508,7 @@ button,.isbutt0 {
 
 @media only screen and (max-width: 800px) {
   table {
-    max-width: calc(100vw - 20px);
+    max-width: calc(100% - 20px);
   }
   img {
     max-width: 100%;
@@ -479,9 +516,16 @@ button,.isbutt0 {
   body{
     font-size: 12px;
   }
-  inbody {
-    width: calc(100vw - 20px);
-    margin: 40px 0px 40px 0px;
+  #pagec0 {
+    left: 0px;
+    width: 100%;
+  }
+
+  .pageindex{
+    box-shadow: 0 0 0 black;
+    width: 0px;
+    display: none;
+    height: calc(100vh - 64px);
   }
   header,footer {
       font-size: 14px;
@@ -498,4 +542,13 @@ button,.isbutt0 {
     width: 24px;
     height: 24px;
   }
+}
+
+::-webkit-scrollbar{
+  background-color: rgba(0,0,0,.125);
+  width: 1em;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: rgba(0,0,0,.5);
 }

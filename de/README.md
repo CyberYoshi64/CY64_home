@@ -1,5 +1,5 @@
-# CY64_home (GitHub website)
+# cyberyoshi64.github.io (GitHub-Website)
 
-Diese Repositorie enthält Daten für meine Webseite
+Diese Repositorie enthält Daten für meine Webseite.
 
 Mehr nicht.

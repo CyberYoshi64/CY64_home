@@ -1,4 +1,4 @@
-# CY64_home (GitHub website)
+# cyberyoshi64.github.io (GitHub website)
 
 This repository contains the files for my GitHub website.
 
