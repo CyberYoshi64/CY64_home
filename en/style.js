@@ -1,3 +1,6 @@
+// style.js
+// 2020 サイバーヨッシー６４
+
 var scrolled=false;
 
 function scup() {

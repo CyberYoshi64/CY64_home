@@ -1,3 +1,11 @@
+/*
+
+common.css
+
+2019-2020 サイバーヨッシー６４
+
+*/
+
 html, body {
     --text-color: black;
     scroll-behavior: smooth;
@@ -38,6 +46,7 @@ html, body {
   top: 32px;
   width: 256px;
   height: calc(100vh - 64px);
+  overflow-y: scroll;
 }
 
 .pageindex button {
