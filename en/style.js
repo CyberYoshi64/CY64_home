@@ -10,8 +10,7 @@ function scup() {
 var topy=document.getElementById("totop")
 
 function scr() {
-  console.log("scrolled. y="+scrollY);
-  if (window.scrollY < 720) {
+  if (window.scrollY < 960) {
     scrup0();
   }else{
     scrup1();
@@ -19,7 +18,7 @@ function scr() {
 }
 
 function scrup0() {
-  topy.style.bottom = "32px";
+  topy.style.bottom = "-32px";
   topy.style.opacity = "0";
 }
 
