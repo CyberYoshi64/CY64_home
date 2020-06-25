@@ -38,6 +38,29 @@ html, body {
   min-height: calc(100vh - 64px);
 }
 
+#scrcontainer {
+  display: block;
+  position: fixed;
+  vertical-align: middle;
+  left: 0px; top: 32px;
+  width: 100%;
+  height: calc(100vh - 64px);
+  background-color: rgba(0,0,0,.5);
+
+}
+
+#scrcontainer div {
+  display: block;
+  position: fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 10vh 10%;
+  max-width: 1280px;
+  width: 80%;
+  height: calc(80vh - 64px);
+
+}
+
 .pageindex{
   background-color: rgba(255,255,255,.75);
   box-shadow: 0 0 5px black;
@@ -139,6 +162,17 @@ table.tblw, tr.tblw {
 
 th {
     font-family: WiiNTLG;
+}
+
+.viewableimg {
+  transition: transform 0.5s, box-shadow 0.5s, border-radius 0.5s;
+  transform: scale(0.95);
+}
+
+.viewableimg:hover {
+  transform: scale(1.25);
+  border-radius: 2px;
+  box-shadow: 0px 10px 20px 5px black;
 }
 
 .dbgtxt {
@@ -306,6 +340,11 @@ vr:after {
     color: white;
 }
 
+.texorange {
+    background: linear-gradient(240deg,#a04000 0%,#ff8000 60%,#c06000 100%);
+    color: white;
+}
+
 .buttonturquoise {
     background-color: rgb(0,220,220);
     color: white;
@@ -424,6 +463,11 @@ header button, footer button, .isbutt0 {
     font-size: 16px;
     border: none;
     transition: background-color 0.3s,color 0.3s,transform 0.3s,box-shadow 0.3s;
+}
+
+.imgcntimg {
+  width: 400px;
+  height: 240px;
 }
 
 /* header icons */
