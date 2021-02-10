@@ -1,6 +1,6 @@
 window.onload = function(){
     var container=document.getElementById("pageContainer")
-    if ((navigator.userAgent.indexOf("Chrome") === -1) && (document.getElementsByClassName("scrtypenotsupported").length === 1)) {
+    if (((navigator.userAgent.indexOf("Chrome") === -1) && (navigator.userAgent.indexOf("Firefox") === -1)) && (document.getElementsByClassName("scrtypenotsupported").length === 1)) {
 		document.getElementsByClassName("scrtypenotsupported")[0].classList.add("swnotsupported")
 	}
 	if (container == null || container.outerHTML.substr(0,5)!="<div ") {
