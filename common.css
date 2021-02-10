@@ -466,8 +466,8 @@ header button, footer button, .isbutt0 {
 }
 
 .imgcntimg {
-  width: 400px;
-  height: 240px;
+  width: 800px;
+  height: 480px;
 }
 
 /* header icons */
@@ -559,7 +559,7 @@ header button, footer button, .isbutt0 {
     src: url('./assets/fonts/MisakiGothic.ttf');
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1100px) {
   table, tbody, th, thead, tr, td, img {
     max-width: calc(100vw - 20px);
   }
@@ -579,7 +579,7 @@ header button, footer button, .isbutt0 {
     left: 0px;
     width: 100%;
   }
-
+	#scroller {display: none;}
   .pageindex{
     box-shadow: 0px 0px 0px black;
     width: 0px;

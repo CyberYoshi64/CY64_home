@@ -1,0 +1,227 @@
+html, body {
+    margin: 0px;
+    font-size: 14px;
+    font-family: Segoe WP, Segoe UI, std, Arial, sans-serif!important;
+    background: linear-gradient(45deg, #505077 0%, #35394e 100%);
+    height: 100vh;
+    width: 100vw;
+    scroll-behavior: smooth;
+    overflow: hidden;
+    user-select: none;
+}
+
+::-webkit-scrollbar{
+    background-color: rgba(0,0,0,.125);
+    width: 1em;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgba(0,0,0,.5);
+}
+
+#pageContainer {
+    position: absolute;
+    opacity: 0; top: 25%;
+    transition: all 500ms;
+}
+
+#header {
+    position:absolute;
+    overflow: hidden;
+    width: 100vw;
+    height: 192px;
+    box-shadow: 0px 0px 10px black;
+    background: rgba(255,225,200,1);
+
+}
+
+#header div {
+	transition: all 500ms;
+}
+
+#pagecontent {
+    margin: 0px;
+    position: absolute;
+    width: calc(100vw - 256px);
+    height: calc(100vh - 192px);
+    top: 192px;
+    left: 256px;
+    box-shadow: 0px 5px 10px black;
+    background: rgba(255,238,225,1);
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#sidebar {
+    margin: 0px;
+    position: absolute;
+    width: 256px;
+    height: calc(100vh - 192px - 144px);
+    top: 192px;
+    left: 0px;
+    box-shadow: 0px 5px 10px black;
+    background: rgba(255,200,165,1);
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#sidebcontact {
+    margin: 0px;
+    font-size: 12px;
+    position: absolute;
+    width: 256px;
+    height: 144px;
+    top: calc(192px + 100vh - 336px);
+    left: 0px;
+    box-shadow: 0px 5px 10px black;
+    background: rgba(255,200,165,1);
+    overflow: hidden;
+}
+
+pad {
+    display: block;
+    width: calc(100% - 60px);
+    height: calc(100% - 40px);
+    padding: 20px 30px 20px 30px;
+}
+
+pad2 {
+    display: block;
+    width: calc(100% - 32px);
+    height: calc(100% - 24px);
+    padding: 12px 16px 12px 16px;
+}
+
+hr {
+	border: 1px solid black;
+	margin: 30px 0px 30px 0px;
+}
+
+div.scrtypenotsupported {
+	opacity: 0; top: 100vh;
+    transition: all 500ms;
+    position: absolute;
+	display: block;
+	width: 75vw;
+	max-height: 75vh;
+	left: 12.5vw;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	background: linear-gradient(135deg, rgba(200,48,16,1) 0%, rgba(255,64,16,0.125) 100%);
+	color: white;
+	font-family: std;
+	font-size: 16px;
+	box-shadow: 0px 10px 20px 10px black;
+}
+
+div.swnotsupported {
+	opacity: 1; top: 12.5vh;
+    transition: all 500ms;
+    position: absolute;
+	display: block;
+	width: 75vw;
+	max-height: 75vh;
+	left: 12.5vw;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	background: linear-gradient(135deg, rgba(255,96,32,1) 0%, rgba(128,0,0,0.875) 100%);
+	color: black;
+	font-family: std;
+	font-size: 16px;
+	box-shadow: 0px 10px 20px 10px black;
+}
+
+table, tr, td, tbody {
+	margin: 0px;
+	padding: 0px;
+	border: none;
+	border-spacing: 0px;
+
+}
+
+button.inpgcontent {
+	border: none;
+	border-radius: 8px;
+	transition: all 250ms;
+	background: rgba(0,0,0,0.25);
+	font-family: Segoe WP, Segoe UI, std, Arial, sans-serif!important;
+	color: black;
+}
+
+a:link button.inpgcontent {
+	background: rgba(0,0,0,0.325);
+	color: #036;
+}
+
+a:visited button.inpgcontent {
+	background: rgba(0,64,255,0.325);
+	color: #603;
+}
+
+a:hover button.inpgcontent {
+	background: rgba(0,0,0,0.5);
+	color: black;
+	transform: scale(1.125);
+}
+
+a:active button.inpgcontent {
+	background: rgba(0,0,0,0.75);
+	color: black;
+	transform: scale(0.875);
+}
+
+button.insdbar {
+	border: 2px solid rgba(0,0,0,0.25);
+	width: 90%;
+	margin-left: 5%;
+	margin-bottom: 2px;
+	border-radius: 4px;
+	transition: all 175ms;
+	background: rgba(0,0,0,0.25);
+	font-family: Segoe WP, Segoe UI, std, Arial, sans-serif!important;
+	color: black;
+}
+
+a:link button.insdbar {
+	background: rgba(0,16,32,0.25);
+	color: #036;
+}
+
+a:visited button.insdbar {
+	background: rgba(0,32,64,0.25);
+	color: #201;
+}
+
+a:hover button.insdbar {
+	background: rgba(200,225,255,1);
+	color: #222;
+	transform: scale(1.0625);
+}
+
+a:active button.insdbar {
+	background: rgba(0,32,120,0.5);
+	color: #000;
+	transform: scale(0.9375);
+}
+
+@font-face {
+    font-family: std;
+    src: url("./assets/fonts/std.ttf") format("truetype");
+}
+
+@media only screen and (max-width: 964px){
+	#pageContainer {
+		filter: blur(4px) brightness(0.0625);
+	}
+	div.scrtypenotsupported {
+		opacity: 1;
+		top: 12.5vh;
+	}
+	::-webkit-scrollbar{
+		background-color: rgba(255,64,0,.125);
+		width: 16px;
+	}
+	::-webkit-scrollbar-thumb{
+		background-color: rgba(255,64,0,.5);
+	}
+}
